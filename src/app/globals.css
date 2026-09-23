@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  html {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 197 32% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 197 32% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 197 32% 12%;
+    --primary: 188 78% 23%;
+    --primary-foreground: 180 40% 98%;
+    --secondary: 190 26% 95%;
+    --secondary-foreground: 195 40% 16%;
+    --muted: 190 22% 96%;
+    --muted-foreground: 197 12% 42%;
+    --accent: 187 40% 94%;
+    --accent-foreground: 190 60% 18%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 195 18% 89%;
+    --input: 195 18% 89%;
+    --ring: 188 78% 30%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 197 32% 18%;
+    --sidebar-primary: 188 78% 23%;
+    --sidebar-primary-foreground: 180 40% 98%;
+    --sidebar-accent: 190 26% 95%;
+    --sidebar-accent-foreground: 195 40% 16%;
+    --sidebar-border: 195 18% 89%;
+    --sidebar-ring: 188 78% 30%;
+  }
+
+  .dark {
+    --background: 197 34% 8%;
+    --foreground: 188 20% 92%;
+    --card: 195 28% 11%;
+    --card-foreground: 188 20% 92%;
+    --popover: 195 28% 11%;
+    --popover-foreground: 188 20% 92%;
+    --primary: 187 62% 52%;
+    --primary-foreground: 197 40% 9%;
+    --secondary: 195 20% 16%;
+    --secondary-foreground: 188 20% 92%;
+    --muted: 195 18% 16%;
+    --muted-foreground: 190 12% 62%;
+    --accent: 191 24% 20%;
+    --accent-foreground: 185 45% 82%;
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 195 18% 20%;
+    --input: 195 18% 20%;
+    --ring: 187 62% 52%;
+    --sidebar-background: 197 34% 8%;
+    --sidebar-foreground: 188 20% 92%;
+    --sidebar-primary: 187 62% 52%;
+    --sidebar-primary-foreground: 197 40% 9%;
+    --sidebar-accent: 195 20% 16%;
+    --sidebar-accent-foreground: 188 20% 92%;
+    --sidebar-border: 195 18% 20%;
+    --sidebar-ring: 187 62% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::selection {
+    @apply bg-primary/15 text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* Keeps native date/time inputs aligned with shadcn input styling */
+  input[type="date"],
+  input[type="time"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}

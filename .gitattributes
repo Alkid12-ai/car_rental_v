@@ -1,0 +1,20 @@
+# Normalise line endings: LF in the repository, platform default on checkout.
+#
+# This project was authored on Windows. Without this file the committed baseline
+# becomes CRLF, and every subsequent diff viewed from Linux or macOS shows
+# whole-file changes — which makes review useless and breaks shell scripts that
+# are sensitive to a trailing carriage return.
+* text=auto
+
+# Explicitly binary. Git should never attempt line-ending conversion on these,
+# and on Windows it would otherwise corrupt them.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.avif binary
+*.svg text
+*.ico binary
+*.woff binary
+*.woff2 binary
